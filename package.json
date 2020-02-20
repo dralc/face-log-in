@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dralc/face-id.git"
+    "url": "git+https://github.com/dralc/face-log-in.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dralc/face-id/issues"
+    "url": "https://github.com/dralc/face-log-in/issues"
   },
-  "homepage": "https://github.com/dralc/face-id#readme",
+  "homepage": "https://github.com/dralc/face-log-in#readme",
   "devDependencies": {
     "face-api.js": "^0.15.1"
   }

@@ -1,10 +1,8 @@
 const MODEL_URL = '/models'
-// const input = document.getElementById('myImage')
 const input = document.getElementById('myVideo')
 const useCam = /VIDEO/i.test(input.tagName);
 const canvas = document.getElementById('myCanvas')
-const labels = ['aloysius', 'peng']
-// const labels = ['sheldon', 'leonard']
+const labels = ['aloysius']
 const maxDescriptorDistance = 0.4 // 0.6 is a good distance threshold value to judge whether the descriptors match or not
 const detectOpts = new faceapi.TinyFaceDetectorOptions({ inputSize: 128 }) // { inputSize: 160 | 320 | 416 | 512, scoreThreshold: 0.5 }
 const drawDetections = false;
