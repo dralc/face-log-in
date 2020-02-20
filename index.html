@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+
+	<style type="text/css">
+		.hide { display:none; }
+	</style>
+</head>
+
+<body class="">
+	<h1>Face log in</h1>
+
+	<a href="/detect.html" class="log-in">> Log in</a>
+	<a href="#" class="log-out hide">> Log out</a>
+
+	<script>
+		// Simple detect of logged-in-profile cookie
+		function getCookie(key) {
+			const ar = new RegExp('[; ]?' + key + '=([^; ]+)', 'i').exec(document.cookie);
+			return ar && ar[1];
+		}
+
+		function delCookie(key) {
+			document.cookie = key + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+		}
+
+		const cookieKey = 'logged-in-profile';
+		const profile = getCookie(cookieKey, document.cookie);
+		const logout_el = document.getElementsByClassName('log-out')[0];
+		logout_el.addEventListener('click', () => {
+			delCookie(cookieKey);
+			document.location = '/';
+		});
+
+		if (profile) {
+			logout_el.classList.toggle('hide');
+			document.getElementsByClassName('log-in')[0].classList.toggle('hide');
+		}
+	</script>
+</body>
+</html>

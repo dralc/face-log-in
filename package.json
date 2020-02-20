@@ -1,0 +1,22 @@
+{
+  "name": "face-id",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dralc/face-id.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dralc/face-id/issues"
+  },
+  "homepage": "https://github.com/dralc/face-id#readme",
+  "devDependencies": {
+    "face-api.js": "^0.15.1"
+  }
+}

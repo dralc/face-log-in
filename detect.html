@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <script src="./node_modules/face-api.js/dist/face-api.min.js"></script>
+    <script defer src="js/main.js"></script>
+
+    <style>
+    .tick {
+        position: absolute;
+        bottom: 3%;
+        right: 0;
+        width: 150px;
+        opacity: 0;
+        transition: all 0.2s ease;
+    }
+    .zoom {
+        opacity: 1;
+        transform:scale(1.5);
+    }
+    h1 {
+        font-size: 70px;
+        color: #fff;
+    }
+    video {
+        border: #fff solid 10px;
+        border-radius: 30px;
+    }
+    </style>
+</head>
+<body style="background-color: #000; text-align: center;">
+
+    <h1>Detecting your face ...</h1>
+    <div id="AuthElement" style="position:relative; text-align: center; margin: auto; width:800px;">
+        <video onPlay="onPlay(this)" id="myVideo" autoplay="true" width="800px" height="600px"></video>
+        <!-- canvas for showing face descriptions -->
+        <canvas id="myCanvas" style="position:absolute; top:0; left:0;"></canvas>
+        <img src="img/tick.png" class="tick"/>
+    </div>
+
+    <script src="js/fn.login.js"></script>
+
+</body>
+</html>
